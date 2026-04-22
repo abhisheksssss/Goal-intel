@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+@layer base {
+  :root {
+    --background: #0A0A0B;
+    --foreground: #FFFFFF;
+    --card: #141416;
+    --card-foreground: #FFFFFF;
+    --popover: #141416;
+    --popover-foreground: #FFFFFF;
+    --primary: #6366F1;
+    --primary-foreground: #FFFFFF;
+    --secondary: #1F1F23;
+    --secondary-foreground: #FFFFFF;
+    --muted: #1F1F23;
+    --muted-foreground: #8E9299;
+    --accent: #6366F1;
+    --accent-foreground: #FFFFFF;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --success: #10B981;
+    --warning: #F59E0B;
+    --border: #232326;
+    --input: #232326;
+    --ring: #6366F1;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-[var(--border)];
+  }
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] antialiased font-sans;
+  }
+  
+  /* Scrollbar hide utility */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
